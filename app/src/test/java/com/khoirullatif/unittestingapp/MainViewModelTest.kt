@@ -72,7 +72,7 @@ class MainViewModelTest {
     fun testMockSurfaceArea() {
         `when`(mainViewModel.getSurfaceArea()).thenReturn(dummySurfaceArea)
         val surfaceArea = mainViewModel.getSurfaceArea()
-        verify(cuboidModel).getSurfaceArea()
-        assertEquals(dummySurfaceArea, surfaceArea, 0.0001)
+        verify(cuboidModel).getSurfaceArea() // memeriksa metode, metode yang dipanggil sesuai dengan argumen yang diberikan
+        assertEquals(dummySurfaceArea, surfaceArea, 0.0001) // validasi output yang diharapkan
     }
 }
